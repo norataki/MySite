@@ -1,0 +1,243 @@
+body{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+
+/* Navbar*/
+nav {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  /*background-color: white;
+  opacity: 0.7;*/
+ 
+  z-index:10;
+}
+.fronttext{
+	z-index: 10;
+	position:absolute;
+	top: 500px;
+	margin-left: 10%;
+	color: #232323;
+	text-transform: uppercase;
+}
+.bottomtext{
+	z-index: 10;
+	position: absolute;
+	top: 575px;
+	margin-left:10%;
+	color:#232323;
+	text-transform: uppercase;
+}
+.bottomtext2{
+	z-index: 10;
+	position: absolute;
+	top: 630px;
+	margin-left:10%;
+	color:#232323;
+	text-transform: uppercase;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	text-align: center;
+
+}
+
+li {
+    display: inline;
+	text-transform: uppercase;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	/*margin: 15px;*/
+	
+}
+.link{
+	display: inline-block;
+	color: #232323;
+	text-decoration: none;
+	margin: 0.8%;
+}
+.link::after {
+	content: '';
+	display: block;
+	width:0;
+	height:2px;
+	background: #000;
+	transition: width .8s;
+}
+.link:hover::after{
+	width: 100%;
+}
+
+li a {
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	color:white;
+}
+
+li a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* navbar end*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+	z-index: 10;
+}
+
+/*slideshow */
+#slides{
+	position: relative;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.showing{
+	filter: opacity(1);
+	opacity: 1;
+	z-index: 2;
+}
+
+.slide{
+	font-size: 40px;
+	padding: 40px;
+	box-sizing: border-box;
+	background: #333;
+	color: #fff;
+	background-size: cover;
+	max-width: 100%;
+  }
+
+.slide:nth-of-type(1){
+	background-color: #fff;
+    background-image: url('water.jpg');
+}
+
+.slide:nth-of-type(2){
+	background-color: #fff;
+    background-image: url('water.jpg');
+}
+
+.slide:nth-of-type(3){
+	background-color: #fff;
+	background-image: url('water.jpg');
+}
+
+/* end slideshow*/
+div.slide-left {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-left h1 {
+  animation: slide-left 5s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 10%;
+    width: 100%;
+  }
+}
+
+div.slide-up {
+  height:200px;
+  overflow:hidden;
+}
+div.slide-up h5 {
+  animation: 5s slide-up;
+  margin-top:0%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem; }
+  .portfolio-item .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1; }
+    .portfolio-item .caption .caption-content {
+      color: #fff;
+      margin: auto 2rem 2rem; }
+      .portfolio-item .caption .caption-content h2 {
+        font-size: 0.8rem;
+        text-transform: uppercase; }
+      .portfolio-item .caption .caption-content p {
+        font-weight: 300;
+        font-size: 1.2rem; }
+  @media (min-width: 992px) {
+    .portfolio-item {
+      max-width: none;
+      margin: 0; }
+      .portfolio-item .caption {
+        -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
+        -webkit-clip-path: inset(0px);
+        clip-path: inset(0px); }
+        .portfolio-item .caption .caption-content {
+          transition: opacity 0.25s;
+          margin-left: 5rem;
+          margin-right: 5rem;
+          margin-bottom: 5rem; }
+      .portfolio-item img {
+        -webkit-transition: -webkit-clip-path 0.25s ease-out;
+        -webkit-clip-path: inset(-1px);
+        clip-path: inset(-1px); }
+      .portfolio-item:hover img {
+        -webkit-clip-path: inset(2rem);
+        clip-path: inset(2rem); }
+      .portfolio-item:hover .caption {
+        background-color: rgba(29, 128, 159, 0.9);
+        -webkit-clip-path: inset(2rem);
+        clip-path: inset(2rem); } }
