@@ -25,3 +25,20 @@
 			  scrollTop: $("#"+div).offset().top
 			 },'slow');
 			}	
+			
+	
+	$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('#toTop').fadeIn();
+    } else {
+        $('#toTop').fadeOut();
+    }
+});
+
+		$('#toTop').on('click', function(){
+			$('html, body').stop().animate({
+				scrollTop: 0
+			}, 500, 'linear');
+			return false;
+		});
+		
