@@ -27,13 +27,13 @@
 			}	
 			
 	
-	$(window).scroll(function() {
-    if ($(this).scrollTop()) {
-        $('#toTop').fadeIn();
-    } else {
-        $('#toTop').fadeOut();
-    }
-});
+			$(window).scroll(function() {
+			if ($(this).scrollTop()) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		});
 
 		$('#toTop').on('click', function(){
 			$('html, body').stop().animate({
